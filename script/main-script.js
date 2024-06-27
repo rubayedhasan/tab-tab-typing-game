@@ -71,6 +71,9 @@ function eventForPressedKey(event) {
     const newScore = previousScore + 1;
     changeElementInnerValue("current-score", newScore);
 
+    // display last increased score as final score after game over
+    changeElementInnerValue("final-score", newScore);
+
     // go to next round
     continueRounds();
   } else {
