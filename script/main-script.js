@@ -26,6 +26,7 @@ function continueRounds() {
   const newAlphabet = keysGenerateRandomly();
   // update alphabet to display
   changeElementInnerValue("key-display", newAlphabet);
+
   //  highlight the target key or new alphabet
   addClassToElement(newAlphabet, "dark:bg-orange-400");
   addClassToElement(newAlphabet, "font-extrabold");
@@ -51,6 +52,7 @@ function eventForPressedKey(event) {
   //   over the game by pressing 'Escape'
   if (keyPressedByPlayer === "Escape") {
     gameOver();
+    return;
   }
 
   // main condition::
@@ -61,9 +63,8 @@ function eventForPressedKey(event) {
       removeClassFromElement(wrongKeyPressByPlayer, "dark:bg-red-500");
     }
 
-    // dismiss background from target key
+    // dismiss background & weight from target key
     removeClassFromElement(keyPressedByPlayer, "dark:bg-orange-400");
-    // remove weight from target key
     removeClassFromElement(keyPressedByPlayer, "font-extrabold");
 
     // increase player gaming score
