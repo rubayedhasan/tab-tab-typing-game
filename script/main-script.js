@@ -50,12 +50,9 @@ function eventForPressedKey(event) {
     removeClassFromElement(keyPressedByPlayer, "font-extrabold");
 
     // increase player gaming score
-    const scoreField = document.getElementById("current-score");
-    const scoreInText = scoreField.innerText;
-    const score = parseInt(scoreInText);
-
-    const newScore = score + 1;
-    scoreField.innerText = newScore;
+    const previousScore = elementInnerNumberValue("current-score");
+    const newScore = previousScore + 1;
+    changeElementInnerValue("current-score", newScore);
 
     // go to next round
     continueRounds();
@@ -73,12 +70,9 @@ function eventForPressedKey(event) {
     wrongKeyPressByPlayer = keyPressedByPlayer;
 
     // reduce player gaming life
-    const lifeField = document.getElementById("current-life");
-    const lifeValueText = lifeField.innerText;
-    const life = parseInt(lifeValueText);
-
-    const newLife = life - 1;
-    lifeField.innerText = newLife;
+    const previousLife = elementInnerNumberValue("current-life");
+    const newLife = previousLife - 1;
+    changeElementInnerValue("current-life", newLife);
 
     // go to next round
     // continueRounds();

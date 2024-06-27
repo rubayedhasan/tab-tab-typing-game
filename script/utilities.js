@@ -17,6 +17,13 @@ function elementInnerValue(elementID) {
   return innerValue;
 }
 
+// convert element innerText or value (number type) into number
+function elementInnerNumberValue(idOfElement) {
+  const strValue = elementInnerValue(idOfElement);
+  const value = parseInt(strValue);
+  return value;
+}
+
 //to change element innerText or value
 function changeElementInnerValue(elementID, changingValue) {
   const element = document.getElementById(elementID);
