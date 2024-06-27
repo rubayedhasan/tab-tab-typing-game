@@ -14,12 +14,15 @@ function continueRounds() {
   const newAlphabet = keysGenerateRandomly();
   // update alphabet to display
   changeElementInnerValue("key-display", newAlphabet);
-  //  highlight the key
+  //  highlight the target key or new alphabet
   addClassToElement(newAlphabet, "dark:bg-orange-400");
   addClassToElement(newAlphabet, "font-extrabold");
 }
 
 // keyboard event to press key and continue the game
+//   wrong key (pressed)
+let wrongKeyPressByPlayer = null;
+
 // function to run the event
 function eventForPressedKey(event) {
   // key press by player
@@ -32,17 +35,37 @@ function eventForPressedKey(event) {
     startPlay();
     return;
   }
+
   // main condition::
   // if player press right key continue or press wrong lose ife and game over
   if (keyPressedByPlayer === targetKey) {
-    // remove key highlight
+    // dismiss background from previous wrong pressed key
+    if (wrongKeyPressByPlayer) {
+      removeClassFromElement(wrongKeyPressByPlayer, "dark:bg-red-500");
+    }
+
+    // dismiss background from target key
     removeClassFromElement(keyPressedByPlayer, "dark:bg-orange-400");
+    // remove weight from target key
     removeClassFromElement(keyPressedByPlayer, "font-extrabold");
+
     // go to next round
     continueRounds();
   } else {
+    // dismiss background from  previous wrong pressed key
+    if (wrongKeyPressByPlayer && wrongKeyPressByPlayer !== keyPressedByPlayer) {
+      removeClassFromElement(wrongKeyPressByPlayer, "dark:bg-red-500");
+    }
+
+    // dismiss background from target key
+    removeClassFromElement(targetKey, "dark:bg-orange-400");
+
     // Highlight wrong pressed key
     addClassToElement(keyPressedByPlayer, "dark:bg-red-500");
+    wrongKeyPressByPlayer = keyPressedByPlayer;
+
+    // go to next round
+    // continueRounds();
   }
 
   //end function
