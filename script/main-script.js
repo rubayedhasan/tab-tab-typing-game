@@ -1,7 +1,8 @@
 // start the game
 function startPlay() {
-  // hide home screen
+  // hide home screen & score board
   addClassToElement("home-screen", "hidden");
+  addClassToElement("score-board", "hidden");
   //   visible playground
   removeClassFromElement("playground", "hidden");
   //   go to next round
@@ -90,7 +91,8 @@ document.addEventListener("keyup", eventForPressedKey);
 
 // end the game
 function gameOver() {
-  // hide playground
+  // hide home screen & playground
+  addClassToElement("home-screen", "hidden");
   addClassToElement("playground", "hidden");
   //   visible score board
   removeClassFromElement("score-board", "hidden");
