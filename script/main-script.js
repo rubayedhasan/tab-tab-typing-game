@@ -36,6 +36,11 @@ function eventForPressedKey(event) {
     return;
   }
 
+  //   over the game by pressing 'Escape'
+  if (keyPressedByPlayer === "Escape") {
+    gameOver();
+  }
+
   // main condition::
   // if player press right key continue or press wrong lose ife and game over
   if (keyPressedByPlayer === targetKey) {
@@ -74,11 +79,19 @@ function eventForPressedKey(event) {
     const newLife = previousLife - 1;
     changeElementInnerValue("current-life", newLife);
 
-    // go to next round
-    // continueRounds();
+    // over the game
+    if (newLife === 0) {
+      gameOver();
+    }
   }
-
-  //end function
 }
 // event handler
 document.addEventListener("keyup", eventForPressedKey);
+
+// end the game
+function gameOver() {
+  // hide playground
+  addClassToElement("playground", "hidden");
+  //   visible score board
+  removeClassFromElement("score-board", "hidden");
+}
