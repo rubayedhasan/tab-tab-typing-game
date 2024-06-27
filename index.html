@@ -19,7 +19,7 @@
     class="font-poppins bg-[#010313CC] bg-[url(images/background.png)] bg-no-repeat bg-center text-white"
   >
     <!-- header section  -->
-    <header class="container mx-auto my-8 text-center min-h-24">
+    <header class="container mx-auto my-8 text-center">
       <h1 class="text-4xl font-inter font-medium drop-shadow-lg">
         Welcome to
         <span class="text-amber-200 font-bold">Tab Tab Typing</span>
@@ -35,9 +35,178 @@
       </p>
     </header>
     <!-- main section  -->
-    <main class="container mx-auto min-h-screen"></main>
+    <main class="container mx-auto min-h-screen">
+      <!-- home screen section  -->
+      <section
+        id="home-screen"
+        class="mt-44 flex justify-center items-center hidden"
+      >
+        <div class="space-y-9 text-center">
+          <h1 class="font-anton text-9xl">ALPHABET CLASH</h1>
+          <p class="text-2xl font-medium">
+            Unleash Your Keyboard Kung Fu : Press “Enter” to Play
+          </p>
+          <button
+            type="button"
+            class="text-[#010313] text-2xl font-semibold bg-white hover:bg-blue-300 focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 me-2 mb-2 dark:bg-white dark:hover:bg-blue-300 focus:outline-none"
+          >
+            Play Now
+          </button>
+        </div>
+      </section>
+      <!-- playground section  -->
+      <section
+        id="playground"
+        class="flex flex-col justify-center items-center gap-y-10"
+      >
+        <!-- playground screen  -->
+        <div
+          id="playground-screen"
+          class="w-[1024px] h-[320px] bg-gray-300 rounded-md border-4 border-[#010313CC]"
+        >
+          <div class="flex justify-center">
+            <p
+              class="text-center text-lg font-semibold bg-[#010313] px-4 py-3 rounded-b-md -translate-y-1"
+            >
+              Don't watch keyboard while playing...
+            </p>
+          </div>
+
+          <!-- display alphabet  -->
+          <p
+            class="mt-10 text-9xl text-center text-[#010313CC] font-bold uppercase"
+          >
+            R
+          </p>
+        </div>
+        <!-- keyboard layout  -->
+        <div class="flex flex-col items-center justify-between gap-6">
+          <!-- 1st key row  -->
+          <div class="font-inter font-medium text-xl text-[#010313]">
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >q</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >w</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >e</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >r</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >t</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >y</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >u</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >i</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >o</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >p</kbd
+            >
+          </div>
+          <!-- 2nd key row  -->
+          <div>
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >a</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >s</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >d</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >f</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >g</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >h</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >j</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >k</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >l</kbd
+            >
+          </div>
+          <!-- 3rd key row  -->
+          <div>
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >z</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >x</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >c</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >v</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >b</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >n</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >m</kbd
+            >
+            <kbd
+              class="px-5 py-2 bg-white border rounded-lg dark:bg-white dark:text-[#010313]"
+              >/</kbd
+            >
+          </div>
+        </div>
+        <!-- life and score button section  -->
+        <div></div>
+      </section>
+      <!-- score board section  -->
+      <section id="score-board"></section>
+    </main>
     <!-- footer section  -->
-    <footer class="container mx-auto my-6 min-h-12">
+    <footer class="container mx-auto my-6">
       <p class="text-lg text-center font-inter font-medium">
         <q>Practice will make you Pro</q>
       </p>
