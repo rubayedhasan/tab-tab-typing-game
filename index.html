@@ -37,16 +37,14 @@
     <!-- main section  -->
     <main class="container mx-auto min-h-screen">
       <!-- home screen section  -->
-      <section
-        id="home-screen"
-        class="mt-44 flex justify-center items-center hidden"
-      >
+      <section id="home-screen" class="mt-40 flex justify-center items-center">
         <div class="space-y-9 text-center">
           <h1 class="font-anton text-9xl">ALPHABET CLASH</h1>
           <p class="text-2xl font-medium">
             Unleash Your Keyboard Kung Fu : Press “Enter” to Play
           </p>
           <button
+            onclick="startPlay()"
             type="button"
             class="text-[#010313] text-2xl font-semibold bg-white hover:bg-blue-300 focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 me-2 mb-2 dark:bg-white dark:hover:bg-blue-300 focus:outline-none"
           >
@@ -222,7 +220,10 @@
         </div>
       </section>
       <!-- score board section  -->
-      <section id="score-board" class="mt-40 flex justify-center items-center">
+      <section
+        id="score-board"
+        class="mt-40 flex justify-center items-center hidden"
+      >
         <div
           class="text-center p-8 bg-[#FFFFFF80] rounded-md border-4 border-black space-y-8"
         >
