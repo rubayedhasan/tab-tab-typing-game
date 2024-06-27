@@ -5,6 +5,17 @@ function startPlay() {
   addClassToElement("score-board", "hidden");
   //   visible playground
   removeClassFromElement("playground", "hidden");
+
+  //   reset life
+  changeElementInnerValue("current-life", 5);
+  //   reset score
+  changeElementInnerValue("current-score", 0);
+
+  // dismiss background from previous wrong pressed key
+  if (wrongKeyPressByPlayer) {
+    removeClassFromElement(wrongKeyPressByPlayer, "dark:bg-red-500");
+  }
+
   //   go to next round
   continueRounds();
 }
