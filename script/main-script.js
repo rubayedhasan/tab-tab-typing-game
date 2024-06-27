@@ -111,4 +111,9 @@ function gameOver() {
   addClassToElement("playground", "hidden");
   //   visible score board
   removeClassFromElement("score-board", "hidden");
+
+  // dismiss background from target key
+  const activeKey = elementInnerValue("key-display");
+  removeClassFromElement(activeKey, "dark:bg-orange-400");
+  // console.log(activeKey);
 }
