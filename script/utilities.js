@@ -1,16 +1,23 @@
-// hide a element
-function hideElement(elementID) {
+// add class to a element
+function addClassToElement(elementID, whichClass) {
   const element = document.getElementById(elementID);
-  element.classList.add("hidden");
+  element.classList.add(whichClass);
 }
 
 // show a element
-function showElement(elementID) {
+function removeClassFromElement(elementID, whichClass) {
   const element = document.getElementById(elementID);
-  element.classList.remove("hidden");
+  element.classList.remove(whichClass);
 }
 
-// change element innerText or value
+//to access element innerText or value
+function elementInnerValue(elementID) {
+  const element = document.getElementById(elementID);
+  const innerValue = element.innerText;
+  return innerValue;
+}
+
+//to change element innerText or value
 function changeElementInnerValue(elementID, changingValue) {
   const element = document.getElementById(elementID);
   element.innerText = changingValue;
