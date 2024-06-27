@@ -49,6 +49,14 @@ function eventForPressedKey(event) {
     // remove weight from target key
     removeClassFromElement(keyPressedByPlayer, "font-extrabold");
 
+    // increase player gaming score
+    const scoreField = document.getElementById("current-score");
+    const scoreInText = scoreField.innerText;
+    const score = parseInt(scoreInText);
+
+    const newScore = score + 1;
+    scoreField.innerText = newScore;
+
     // go to next round
     continueRounds();
   } else {
@@ -63,6 +71,14 @@ function eventForPressedKey(event) {
     // Highlight wrong pressed key
     addClassToElement(keyPressedByPlayer, "dark:bg-red-500");
     wrongKeyPressByPlayer = keyPressedByPlayer;
+
+    // reduce player gaming life
+    const lifeField = document.getElementById("current-life");
+    const lifeValueText = lifeField.innerText;
+    const life = parseInt(lifeValueText);
+
+    const newLife = life - 1;
+    lifeField.innerText = newLife;
 
     // go to next round
     // continueRounds();
